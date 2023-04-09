@@ -101,6 +101,7 @@ public class DanhSachNhanVien {
               SumPT+= xyz.luong();
             }
         }
+        System.out.println("Luong trung binh cua cong ty la " + SumPT);
         return SumPT;
     }
     public void SortNVFultime (){

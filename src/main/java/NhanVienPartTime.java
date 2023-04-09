@@ -25,7 +25,7 @@ public class NhanVienPartTime extends NhanVien{
     @Override
     public String toString() {
         return "NhanVienPartTime{" +
-                "giolamthem=" + giolamthem +
+                "luong =" + luong() +
                 ", maNV='" + maNV + '\'' +
                 ", nameNV='" + nameNV + '\'' +
                 ", ageNV=" + ageNV +
