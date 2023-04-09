@@ -66,14 +66,19 @@ public class DanhSachNhanVien {
         danhsach.add(nv2);
     }
     public void display() {
-        System.out.println(danhsach);
+
+        for (NhanVien abc: danhsach) {
+            System.out.println(abc + "\n");
+        }
     }
     public double luongTB() {
         double sumLuong=0;
         for (NhanVien f: danhsach) {
             sumLuong+= f.luong();
         }
-        return sumLuong/danhsach.size();
+        double luongTB=sumLuong/danhsach.size();
+        System.out.println("Luong trung binh toan cong ty la  " + luongTB + " VND");
+        return luongTB;
     }
     public void duoiDayXaHoi() {
         ArrayList<NhanVien> duoiDayXH= new ArrayList<>();
@@ -85,7 +90,9 @@ public class DanhSachNhanVien {
             }
 
         }
-        System.out.println(duoiDayXH);
+        for (NhanVien abc: duoiDayXH) {
+            System.out.println(abc + "\n");
+        }
     }
     public double SumOfPartime () {
         double SumPT=0;
@@ -111,6 +118,8 @@ public class DanhSachNhanVien {
                 else return -1;
             }
         });
-        System.out.println(sortNVFT);
+      for (NhanVien abc: sortNVFT) {
+          System.out.println(abc +"\n");
+      }
     }
 }

@@ -21,27 +21,13 @@ public class Main {
                     "0. Exit \n");
             choice= sc3.nextInt();
             switch (choice) {
-                case 1:
-                    danhsachcuatao.themNVFullTime();
-                    break;
-                case 2:
-                    danhsachcuatao.themNVPartTime();
-                    break;
-                case 3:
-                    danhsachcuatao.luongTB();
-                    break;
-                case 4:
-                    danhsachcuatao.duoiDayXaHoi();
-                    break;
-                case 5:
-                    danhsachcuatao.SumOfPartime();
-                    break;
-                case 6:
-                    danhsachcuatao.SortNVFultime();
-                case 7:
-                    danhsachcuatao.display();
-                    break;
-
+                case 1 -> danhsachcuatao.themNVFullTime();
+                case 2 -> danhsachcuatao.themNVPartTime();
+                case 3 -> danhsachcuatao.luongTB();
+                case 4 -> danhsachcuatao.duoiDayXaHoi();
+                case 5 -> danhsachcuatao.SumOfPartime();
+                case 6 -> danhsachcuatao.SortNVFultime();
+                case 7 -> danhsachcuatao.display();
             }
 
         } while (choice!=0);
