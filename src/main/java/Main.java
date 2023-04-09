@@ -23,9 +23,7 @@ public class Main {
         danhsachcuatao.add(nv8);
         NhanVien nv9=new NhanVienPartTime("203","C",22,80,"em@gmail","Phu Yen",500);
         danhsachcuatao.add(nv9);
-        NhanVien nv10=new NhanVienPartTime("204","M",20,80,"em@gmail","Thanh Hoa" +
-                "" +
-                "",10);
+        NhanVien nv10=new NhanVienPartTime("204","M",20,80,"em@gmail","Thanh Hoa",10);
         danhsachcuatao.add(nv10);
         int choice;
         do {
