@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         DanhSachNhanVien danhsachcuatao=new DanhSachNhanVien();
-        int choice=0;
+        int choice;
         do {
             Scanner sc3=new Scanner(System.in);
 

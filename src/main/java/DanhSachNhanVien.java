@@ -112,12 +112,10 @@ public class DanhSachNhanVien {
                 sortNVFT.add(abc);
             }
         }
-        Collections.sort(sortNVFT, new Comparator<NhanVien>() {
+        sortNVFT.sort(new Comparator<NhanVien>() {
             @Override
             public int compare(NhanVien o1, NhanVien o2) {
-                if (o1.luong()> o2.luong()) return 1;
-                else if (o1.luong()== o2.luong()) return 0;
-                else return -1;
+                return Double.compare(o1.luong(), o2.luong());
             }
         });
         System.out.println("Thu tu luong tang dan cua nhan vien Full Time" +"\n");
