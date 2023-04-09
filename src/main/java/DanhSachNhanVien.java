@@ -21,6 +21,9 @@ public class DanhSachNhanVien {
     public void setDanhsach(ArrayList<NhanVien> danhsach) {
         this.danhsach = danhsach;
     }
+    public void add(NhanVien a){
+        danhsach.add(a);
+    }
     public void themNVFullTime() {
         Scanner sc1= new Scanner(System.in);
         System.out.println("Nhap ma nhan vien");
