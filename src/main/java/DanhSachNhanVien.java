@@ -51,21 +51,21 @@ public class DanhSachNhanVien {
         String maNV1=sc1.nextLine();
         System.out.println("Nhap ten nhan vien");
         String name1=sc1.nextLine();
-        System.out.println("Nhap tuoi nhan vien");
-        int age1= sc1.nextInt();
-        System.out.println("Nhap sdt nhan vien");
-        int phone1=sc1.nextInt();
         System.out.println("Nhap email nhan vien");
         String email1=sc1.nextLine();
         System.out.println("Nhap dia chi nhan vien");
         String adr1=sc1.nextLine();
+        System.out.println("Nhap tuoi nhan vien");
+        int age1= sc1.nextInt();
+        System.out.println("Nhap sdt nhan vien");
+        int phone1=sc1.nextInt();
         System.out.println("Nhap gio lam them nhan vien");
         double lamthem1= sc1.nextDouble();
-        sc1.close();
         NhanVien nv2= new NhanVienPartTime(maNV1,name1,age1,phone1,email1,adr1,lamthem1);
         danhsach.add(nv2);
     }
     public void display() {
+        System.out.println("Danh sach toan bo nhan vien trong cong ty: \n");
 
         for (NhanVien abc: danhsach) {
             System.out.println(abc + "\n");
@@ -90,6 +90,7 @@ public class DanhSachNhanVien {
             }
 
         }
+        System.out.println("Danh sach nhan vien duoi day xa hoi trong cong ty \n");
         for (NhanVien abc: duoiDayXH) {
             System.out.println(abc + "\n");
         }
@@ -101,7 +102,7 @@ public class DanhSachNhanVien {
               SumPT+= xyz.luong();
             }
         }
-        System.out.println("Luong trung binh cua cong ty la " + SumPT);
+        System.out.println("Tong luong nhan vien Partime cua cong ty la " + SumPT);
         return SumPT;
     }
     public void SortNVFultime (){
@@ -119,6 +120,7 @@ public class DanhSachNhanVien {
                 else return -1;
             }
         });
+        System.out.println("Thu tu luong tang dan cua nhan vien Full Time" +"\n");
       for (NhanVien abc: sortNVFT) {
           System.out.println(abc +"\n");
       }
