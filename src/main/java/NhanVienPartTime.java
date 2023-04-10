@@ -41,6 +41,7 @@ public class NhanVienPartTime extends NhanVien{
     public void input() {
         super.input();
         Scanner sc1= new Scanner(System.in);
+        System.out.println("Nhap gio lam them");
         this.giolamthem= sc1.nextDouble();
     }
 }
