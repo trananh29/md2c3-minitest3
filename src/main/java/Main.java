@@ -38,6 +38,7 @@ public class Main {
                     "5. Tong luong nhan vien parttime .\n" +
                     "6. Hien thi danh sach sap xep nhan vien full time tang dan.\n" +
                     "7. Hien thi danh sach toan bo nhan vien\n" +
+                    "8. Sua Nhan vien theo ma nhan vien \n" +
                     "0. Exit \n");
             choice= sc3.nextInt();
             switch (choice) {
@@ -48,6 +49,7 @@ public class Main {
                 case 5 -> danhsachcuatao.SumOfPartime();
                 case 6 -> danhsachcuatao.SortNVFultime();
                 case 7 -> danhsachcuatao.display();
+                case 8 -> danhsachcuatao.suaNV();
             }
 
         } while (choice!=0);

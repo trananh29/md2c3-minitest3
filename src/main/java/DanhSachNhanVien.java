@@ -123,30 +123,39 @@ public class DanhSachNhanVien {
         }
     }
     public void suaNV(){
-        System.out.println("Nhap ma nhan vien can xoa");
+        System.out.println("Nhap ma nhan vien can sua");
         Scanner sc5= new Scanner(System.in);
-        String manv= sc5.nextLine();
-        int index=-1;
+        String maNV1= sc5.nextLine();
+        int index1=-1;
         for (int i=0;i<danhsach.size();i++) {
-            if (Objects.equals(danhsach.get(i).getMaNV(), manv)) {
-                index=i;
+            if (Objects.equals(danhsach.get(i).getMaNV(), maNV1)) {
+                index1=i;
+                System.out.println("SAo ko in dc nhi");
                 break;
-            }
-        if (index!=-1) {
-            System.out.println("Nhan vien co ma: " + manv +" ton tai, co ten la " + danhsach.get(index).getNameNV() );
-        } if (index==-1) {
+            } }
+            System.out.println(index1);
+        if (index1!=-1) {
+            System.out.println("Nhan vien co ma: " + maNV1 +" ton tai, co ten la " + danhsach.get(index1).getNameNV() );
+        } if (index1==-1) {
                 System.out.println("Nhan vien khong ton tai");
             }
 
 
-                if(danhsach.get(index) instanceof NhanVienFullTime) {
-                    System.out.println("Nhap ma moi nhan vien"); String newManv=sc5.nextLine();
-                    danhsach.get(index).setNameNV(newManv);
+        if(danhsach.get(index1) instanceof NhanVienFullTime) {
+
+                    System.out.println("Nhap lai thong tin nhan vien");
+
+                    ((NhanVienFullTime) danhsach.get(index1)).input();
+                    System.out.println(" Da nhap thanh cong thong tin moi nhan vien");
+
                 }
-           else if(danhsach.get(index) instanceof NhanVienPartTime) {
-                    System.out.println("Nhap ma moi nhan vien"); String newManv=sc5.nextLine();
-                    danhsach.get(index).setNameNV(newManv);
+           else if(danhsach.get(index1) instanceof NhanVienPartTime) {
+                    NhanVien e= new NhanVienPartTime();
+                    System.out.println("Nhap lai thong tin nhan vien");
+
+                    ((NhanVienPartTime) danhsach.get(index1)).input();
+                    System.out.println(" Da nhap thanh cong thong tin moi nhan vien");
                 }
         }
-    }
+
 }
