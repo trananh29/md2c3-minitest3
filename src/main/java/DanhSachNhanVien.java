@@ -157,5 +157,26 @@ public class DanhSachNhanVien {
                     System.out.println(" Da nhap thanh cong thong tin moi nhan vien");
                 }
         }
+        public void xoaNV(){
+            System.out.println("Nhap ma nhan vien can xoa");
+            Scanner sc5= new Scanner(System.in);
+            String maNV1= sc5.nextLine();
+            int index1=-1;
+            for (int i=0;i<danhsach.size();i++) {
+                if (Objects.equals(danhsach.get(i).getMaNV(), maNV1)) {
+                    index1=i;
+                    System.out.println("SAo ko in dc nhi");
+                    break;
+                } }
+            System.out.println(index1);
+            if (index1!=-1) {
+                System.out.println("Nhan vien co ma: " + maNV1 +" ton tai, co ten la " + danhsach.get(index1).getNameNV() );
+                danhsach.remove(index1);
+                System.out.println("Nhan vien: " + maNV1 + " da bay mau");
+            } if (index1==-1) {
+                System.out.println("Nhan vien khong ton tai");
+            }
+
+        }
 
 }
