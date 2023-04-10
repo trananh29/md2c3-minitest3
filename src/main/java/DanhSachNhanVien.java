@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Scanner;
+import java.util.*;
 
 public class DanhSachNhanVien {
     public ArrayList<NhanVien> danhsach;
@@ -24,7 +21,7 @@ public class DanhSachNhanVien {
     public void add(NhanVien a){
         danhsach.add(a);
     }
-    public void themNVFullTime() {
+    public static NhanVien themNV() {
         Scanner sc1= new Scanner(System.in);
         System.out.println("Nhap ma nhan vien");
         String maNV1=sc1.nextLine();
@@ -38,34 +35,20 @@ public class DanhSachNhanVien {
         int age1= sc1.nextInt();
         System.out.println("Nhap sdt nhan vien");
         int phone1=sc1.nextInt();
-        System.out.println("Nhap thuong  nhan vien");
-        double thuong= sc1.nextDouble();
-        System.out.println("Nhap tien phat nhan vien");
-        double phat= sc1.nextDouble();
-        System.out.println("Nhap tien luong cung nhan vien");
-        double luong= sc1.nextDouble();
-        NhanVien e= new NhanVienFullTime(maNV1,name1,age1,phone1,email1,adr1,thuong,phat,luong);
-       danhsach.add(e);
+        return null;
+    }
+    public void themNVFullTime() {
+
+
+      NhanVien abc=new NhanVienFullTime();
+      abc.input();
+      danhsach.add(abc);
 
     }
     public void themNVPartTime() {
-        Scanner sc1= new Scanner(System.in);
-        System.out.println("Nhap ma nhan vien");
-        String maNV1=sc1.nextLine();
-        System.out.println("Nhap ten nhan vien");
-        String name1=sc1.nextLine();
-        System.out.println("Nhap email nhan vien");
-        String email1=sc1.nextLine();
-        System.out.println("Nhap dia chi nhan vien");
-        String adr1=sc1.nextLine();
-        System.out.println("Nhap tuoi nhan vien");
-        int age1= sc1.nextInt();
-        System.out.println("Nhap sdt nhan vien");
-        int phone1=sc1.nextInt();
-        System.out.println("Nhap gio lam them nhan vien");
-        double lamthem1= sc1.nextDouble();
-        NhanVien nv2= new NhanVienPartTime(maNV1,name1,age1,phone1,email1,adr1,lamthem1);
-        danhsach.add(nv2);
+    NhanVien abc=new NhanVienPartTime();
+    abc.input();
+    danhsach.add(abc);
     }
     public void display() {
         System.out.println("Danh sach toan bo nhan vien trong cong ty: \n");
@@ -125,5 +108,45 @@ public class DanhSachNhanVien {
       for (NhanVien abc: sortNVFT) {
           System.out.println(abc +"\n");
       }
+    }
+    public void XoaNV(){
+        System.out.println("Nhap ma nhan vien can xoa");
+        Scanner sc4= new Scanner(System.in);
+        String manv= sc4.nextLine();
+        for (NhanVien abc: danhsach) {
+            if(Objects.equals(abc.getMaNV(), manv)) {
+                System.out.println("Thong tin nhan vien can xoa \n");
+                System.out.println(abc);
+                danhsach.remove(abc);
+                break;
+            }
+        }
+    }
+    public void suaNV(){
+        System.out.println("Nhap ma nhan vien can xoa");
+        Scanner sc5= new Scanner(System.in);
+        String manv= sc5.nextLine();
+        int index=-1;
+        for (int i=0;i<danhsach.size();i++) {
+            if (Objects.equals(danhsach.get(i).getMaNV(), manv)) {
+                index=i;
+                break;
+            }
+        if (index!=-1) {
+            System.out.println("Nhan vien co ma: " + manv +" ton tai, co ten la " + danhsach.get(index).getNameNV() );
+        } if (index==-1) {
+                System.out.println("Nhan vien khong ton tai");
+            }
+
+
+                if(danhsach.get(index) instanceof NhanVienFullTime) {
+                    System.out.println("Nhap ma moi nhan vien"); String newManv=sc5.nextLine();
+                    danhsach.get(index).setNameNV(newManv);
+                }
+           else if(danhsach.get(index) instanceof NhanVienPartTime) {
+                    System.out.println("Nhap ma moi nhan vien"); String newManv=sc5.nextLine();
+                    danhsach.get(index).setNameNV(newManv);
+                }
+        }
     }
 }

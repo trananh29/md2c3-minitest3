@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class NhanVienPartTime extends NhanVien{
     private double giolamthem;
 
@@ -33,5 +35,12 @@ public class NhanVienPartTime extends NhanVien{
                 ", emailNV='" + emailNV + '\'' +
                 ", adressNV='" + adressNV + '\'' +
                 '}';
+    }
+
+    @Override
+    public void input() {
+        super.input();
+        Scanner sc1= new Scanner(System.in);
+        this.giolamthem= sc1.nextDouble();
     }
 }

@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class NhanVienFullTime extends NhanVien{
     private double tienthuong;
     private double tienphat;
@@ -53,5 +55,18 @@ public class NhanVienFullTime extends NhanVien{
                 ", emailNV='" + emailNV + '\'' +
                 ", adressNV='" + adressNV + '\'' +
                 '}';
+    }
+
+    @Override
+    public void input() {
+        super.input();
+        Scanner sc1= new Scanner(System.in);
+        System.out.println("Nhap thuong  nhan vien");
+        this.tienthuong= sc1.nextDouble();
+        System.out.println("Nhap tien phat nhan vien");
+        this.tienphat= sc1.nextDouble();
+        System.out.println("Nhap tien luong cung nhan vien");
+       this.luongcung= sc1.nextDouble();
+
     }
 }

@@ -1,4 +1,6 @@
-public abstract class NhanVien {
+import java.util.Scanner;
+
+public class NhanVien {
     protected String maNV;
     protected String nameNV;
     protected int ageNV;
@@ -65,5 +67,22 @@ public abstract class NhanVien {
     public void setAdressNV(String adressNV) {
         this.adressNV = adressNV;
     }
-    public abstract double luong();
+    public double luong(){
+        return 0;
+    };
+public void input(){
+    Scanner sc1= new Scanner(System.in);
+    System.out.println("Nhap ma nhan vien");
+     this.maNV=sc1.nextLine();
+    System.out.println("Nhap ten nhan vien");
+     this.nameNV=sc1.nextLine();
+    System.out.println("Nhap email nhan vien");
+    this.emailNV =sc1.nextLine();
+    System.out.println("Nhap dia chi nhan vien");
+    this.adressNV=sc1.nextLine();
+    System.out.println("Nhap tuoi nhan vien");
+    this.ageNV= sc1.nextInt();
+    System.out.println("Nhap sdt nhan vien");
+    this.phoneNV=sc1.nextInt();
+}
 }
